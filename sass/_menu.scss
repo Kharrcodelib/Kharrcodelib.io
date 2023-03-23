@@ -1,0 +1,110 @@
+.menu-logo {
+  width: 600px;
+  height: auto;
+  position: center;
+}
+
+.grid-container {
+  max-width: 600px;
+}
+
+.menu-title {
+  font-family: "Shrikhand", cursive;
+  font-size: 25px;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-dishes {
+  background-color: lightgrey;
+  padding: 20px 10px;
+  border-radius: 15px;
+}
+
+.menu-subtitle {
+  border-bottom: 3px solid#99E2D0;
+  width: 47px;
+}
+
+.menu-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.menu-item {
+  border-radius: 15px;
+  background: white;
+  margin: 10px;
+}
+
+.menu-header {
+  z-index: -1;
+  margin-bottom: -50px;
+  position: relative;
+}
+
+.menu__content {
+  display: flex;
+  align-items: center;
+}
+
+.menu__text {
+  flex-grow: 1;
+}
+
+.text-text {
+  color: black;
+}
+
+.menu__price {
+  display: flex;
+  align-items: flex-end;
+}
+
+/*
+.works:hover {
+  background-color: #ee82ee;
+  cursor: pointer;
+}
+.works:hover .works__icon {
+  color: #9356dc;
+}
+
+
+.works__icon,
+.works__text {
+  padding-left: 30px;
+}*/
+
+.order-button {
+  background-image: linear-gradient(to top left, #9356dc, #ff79da);
+  color: white;
+  padding: 16px, 35px;
+  border: none;
+  cursor: pointer;
+  height: 50px;
+  width: 200px;
+  border-radius: 20px;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.footer-info {
+  background-color: black;
+}
+
+.change-on-hover path {
+  fill: white;
+}
+
+.change-on-hover:hover path {
+  fill: white;
+}
+
+.footer-text {
+  color: white;
+}
