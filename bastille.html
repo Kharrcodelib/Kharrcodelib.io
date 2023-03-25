@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bastile Menu</title>
+    <title>Bastille Menu</title>
     <link href="css/main.css" type="text/css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -25,11 +25,20 @@
   </head>
   <body class="menu-page">
     <div class="grid-container">
-      <img
-        class="menu-logo"
-        src="images/logo/ohmyfood.png"
-        alt="Oh My Food Logo"
-      />
+      <header>
+        <div class="header-icon">
+          <a href="http://127.0.0.1:5501/index.html"
+            ><i class="fa-solid fa-arrow-left"></i
+          ></a>
+        </div>
+        <div class="header-image">
+          <img
+            class="logo"
+            src="images/logo/ohmyfood.png"
+            alt="Oh My Food Logo"
+          />
+        </div>
+      </header>
       <div class="menu-header">
         <img
           class="menu-image"
@@ -37,99 +46,188 @@
           alt="bastille image"
         />
       </div>
-      <div class="menu-dishes">
-        <div class="menu-title">
-          Bastille <i class="fa-regular fa-heart"></i>
-        </div>
-        <div class="menu-subtitle">ENTREES</div>
-        <div class="menu-item">
-          <div class="menu__content">
-            <div class="menu__text">
-              <h4>Citrus Squid Carpaccio</h4>
-              <div class="text-text">With orange zest</div>
-            </div>
-            <div class="menu__price">25€</div>
-          </div>
-        </div>
-        <div class="menu-item">
-          <div class="menu__content">
-            <div class="menu__text">
-              <h4>Grandmother's Vegetable Soup</h4>
-              <div class="text-text">
-                Carrots, parsnips, Jerusalem artichoke
+      <section class="menu-dishes">
+        <div class="grid-row">
+          <div class="grid-col">
+            <div class="menu-title">
+              <h1>Bastille</h1>
+              <div class="menutitle-icon">
+                <div class="fa-stack heart-items">
+                  <i class="fa fa-regular fa-heart fa-stack-2x heart-empty"></i>
+                  <i class="fa-solid fa-heart fa-stack-2x heart-fill"></i>
+                </div>
               </div>
             </div>
-            <div class="menu__price">35€</div>
+          </div>
+          <div class="grid-col">
+            <div class="menu-subtitle">ENTREES</div>
+          </div>
+          <div class="grid-col grid-col-desktop-3 grid-col-tablet-2">
+            <div class="menu-item">
+              <div class="menu__content">
+                <div class="menu__text">
+                  <h4>Squid Carpaccio</h4>
+                  <div class="text-text">With orange zest</div>
+                </div>
+                <div class="menu__price">25€</div>
+                <div class="menu__icon">
+                  <i
+                    class="fa-solid fa-circle-check menu-icon__rotate fa-2xl"
+                  ></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid-col grid-col-desktop-3 grid-col-tablet-2">
+            <div class="menu-item">
+              <div class="menu__content">
+                <div class="menu__text">
+                  <h4>Grandmother's Vegetable Soup</h4>
+                  <div class="text-text">
+                    Carrots, parsnips, Jerusalem artichoke
+                  </div>
+                </div>
+                <div class="menu__price">35€</div>
+                <div class="menu__icon">
+                  <i
+                    class="fa-solid fa-circle-check menu-icon__rotate fa-2xl"
+                  ></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid-col grid-col-desktop-3 grid-col-tablet-2">
+            <div class="menu-item">
+              <div class="menu__content">
+                <div class="menu__text">
+                  <h4>Onion Soup</h4>
+                  <div class="text-text">Revisited</div>
+                </div>
+                <div class="menu__price">20€</div>
+                <div class="menu__icon">
+                  <i
+                    class="fa-solid fa-circle-check menu-icon__rotate fa-2xl"
+                  ></i>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="menu-item">
-          <div class="menu__content">
-            <div class="menu__text">
-              <h4>Onion Soup</h4>
-              <div class="text-text">Revisited</div>
+        <div class="grid-row">
+          <div class="grid-col">
+            <div class="menu-subtitle">MAIN DISH</div>
+          </div>
+          <div class="grid-col grid-col-desktop-3 grid-col-tablet-2">
+            <div class="menu-item">
+              <div class="menu__content">
+                <div class="menu__text">
+                  <h4>Scallops</h4>
+                  <div class="text-text">With mashed parsnips</div>
+                </div>
+                <div class="menu__price">40€</div>
+                <div class="menu__icon">
+                  <i
+                    class="fa-solid fa-circle-check menu-icon__rotate fa-2xl"
+                  ></i>
+                </div>
+              </div>
             </div>
-            <div class="menu__price">20€</div>
+          </div>
+          <div class="grid-col grid-col-desktop-3 grid-col-tablet-2">
+            <div class="menu-item">
+              <div class="menu__content">
+                <div class="menu__text">
+                  <h4>Magret de canard</h4>
+                  <div class="text-text">With mashed potatoes</div>
+                </div>
+                <div class="menu__price">35€</div>
+                <div class="menu__icon">
+                  <i
+                    class="fa-solid fa-circle-check menu-icon__rotate fa-2xl"
+                  ></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid-col grid-col-desktop-3 grid-col-tablet-2">
+            <div class="menu-item">
+              <div class="menu__content">
+                <div class="menu__text">
+                  <h4>Game Hen</h4>
+                  <div class="text-text">With vegetable gnocchis</div>
+                </div>
+                <div class="menu__price">44€</div>
+                <div class="menu__icon">
+                  <i
+                    class="fa-solid fa-circle-check menu-icon__rotate fa-2xl"
+                  ></i>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="menu-subtitle">MAIN DISH</div>
-        <div class="menu-item">
-          <div class="menu__content">
-            <div class="menu__text">
-              <h4>Scallops</h4>
-              <div class="text-text">With mashed parsnips</div>
+        <div class="grid-row">
+          <div class="grid-col">
+            <div class="menu-subtitle">DESSERTS</div>
+          </div>
+          <div class="grid-col grid-col-desktop-3 grid-col-tablet-2">
+            <div class="menu-item">
+              <div class="menu__content">
+                <div class="menu__text">
+                  <h4>Floral Ice Cream</h4>
+                  <div class="text-text">With hazelnut butter</div>
+                </div>
+                <div class="menu__price">18€</div>
+                <div class="menu__icon">
+                  <i
+                    class="fa-solid fa-circle-check menu-icon__rotate fa-2xl"
+                  ></i>
+                </div>
+              </div>
             </div>
-            <div class="menu__price">40€</div>
+          </div>
+          <div class="grid-col grid-col-desktop-3 grid-col-tablet-2">
+            <div class="menu-item">
+              <div class="menu__content">
+                <div class="menu__text">
+                  <h4>Chocolate Lava Cake</h4>
+                  <div class="text-text">Revisited</div>
+                </div>
+                <div class="menu__price">22€</div>
+                <div class="menu__icon">
+                  <i
+                    class="fa-solid fa-circle-check menu-icon__rotate fa-2xl"
+                  ></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid-col grid-col-desktop-3 grid-col-tablet-2">
+            <div class="menu-item">
+              <div class="menu__content">
+                <div class="menu__text">
+                  <h4>Napolean</h4>
+                  <div class="text-text">With blueberries and marzipan</div>
+                </div>
+                <div class="menu__price">23€</div>
+                <div class="menu__icon">
+                  <i
+                    class="fa-solid fa-circle-check menu-icon__rotate fa-2xl"
+                  ></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid-col grid-col-desktop-3 grid-col-tablet-2"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-col">
+            <div class="button-center">
+              <button class="order-button">Order</button>
+            </div>
           </div>
         </div>
-        <div class="menu-item">
-          <div class="menu__content">
-            <div class="menu__text">
-              <h4>Magret de canard</h4>
-              <div class="text-text">With mashed potatoes</div>
-            </div>
-            <div class="menu__price">35€</div>
-          </div>
-        </div>
-        <div class="menu-item">
-          <div class="menu__content">
-            <div class="menu__text">
-              <h4>Game Hen</h4>
-              <div class="text-text">With vegetable gnocchis</div>
-            </div>
-            <div class="menu__price">44€</div>
-          </div>
-        </div>
-        <div class="menu-subtitle">DESSERTS</div>
-        <div class="menu-item">
-          <div class="menu__content">
-            <div class="menu__text">
-              <h4>Floral Ice Cream</h4>
-              <div class="text-text">With hazelnut butter</div>
-            </div>
-            <div class="menu__price">18€</div>
-          </div>
-        </div>
-        <div class="menu-item">
-          <div class="menu__content">
-            <div class="menu__text">
-              <h4>Chocolate Lava Cake</h4>
-              <div class="text-text">Revisited</div>
-            </div>
-            <div class="menu__price">22€</div>
-          </div>
-        </div>
-        <div class="menu-item">
-          <div class="menu__content">
-            <div class="menu__text">
-              <h4>Napolean</h4>
-              <div class="text-text">With blueberries and marzipan</div>
-            </div>
-            <div class="menu__price">23€</div>
-          </div>
-      </div>
-      <div>
-        <button class="order-button">Order</button>
-      </div>
+      </section>
     </div>
     <footer>
       <div class="grid-container">

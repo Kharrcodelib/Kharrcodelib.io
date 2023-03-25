@@ -1,57 +1,126 @@
-.menu-logo {
-  width: 600px;
-  height: auto;
-  position: center;
+header {
+  position: relative;
+  padding: 20px 0;
+} 
+
+.header-image {
+  text-align: center;
 }
 
-.grid-container {
-  max-width: 600px;
+.header-icon {
+  position: absolute;
+  left: 10px;
+  top: 30px;
+  font-size: 16px;
 }
 
 .menu-title {
-  font-family: "Shrikhand", cursive;
-  font-size: 25px;
   padding: 0;
   margin: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu-title h1 {
+  font-family: 'Shrikhand', cursive;
+  font-size: 25px;
+  padding: 0;
+  margin: 0 0 30px 0;
 }
 
 .menu-dishes {
-  background-color: lightgrey;
-  padding: 20px 10px;
-  border-radius: 15px;
+  position: relative;
+  margin-top: -50px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 35px;
+}
+
+.menu-dishes .grid-row {
+  margin-bottom: 25px;
 }
 
 .menu-subtitle {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.menu-subtitle::after {
   border-bottom: 3px solid#99E2D0;
+  content: '';
+  display: block;
   width: 47px;
 }
 
 .menu-image {
   width: 100%;
-  height: auto;
+  height: 200px;
   object-fit: cover;
+}
+
+@include tablet-only  {
+  .menu-image {
+    height: 300px;
+  }
+}
+
+/* desktop styles */
+@include desktop-only {
+  .menu-image {
+    height: 400px;
+  }
 }
 
 .menu-item {
   border-radius: 15px;
   background: white;
-  margin: 10px;
+  margin-bottom: 15px;
+}
+
+.menu-item:hover {
+  cursor: pointer;
+
+  .menu__icon {
+    right: 0; //animation that slides icon in from right side
+  }
+
+  .menu__text,
+  .text-text {
+    margin-right: 10px; // animation margin so we can see ellipses if text doesn't fit, included for heading as well, but maybe it not needed for heading and text should just wrap, so you could remove the heading one if you wish
+  }
+
+  .menu__price {
+    margin-right: 50px; // animation margin so we can see ellipses if text doesn't fit, included for heading as well, but maybe it not needed for heading and text should just wrap, so you could remove the heading one if you wish
+  }
+
+  .menu-icon__rotate {
+    rotate: 360deg; // animation for rotation
+  }
 }
 
 .menu-header {
-  z-index: -1;
-  margin-bottom: -50px;
   position: relative;
 }
 
 .menu__content {
   display: flex;
-  align-items: center;
+  padding: 10px;
+  // border-radius: 10px;
+  // background: white;
+  position: relative; // this is so that when we use position absolute the icon container will be in the right place
+  overflow: hidden; // we set it to overflow hidden, to hide the slide in of the icon, remove this and your see what I mean
 }
 
+//nesting example, look up further
 .menu__text {
   flex-grow: 1;
+  h4 {
+    padding: 0;
+    margin: 0;
+  }
 }
+
+
 
 .text-text {
   color: black;
@@ -62,23 +131,39 @@
   align-items: flex-end;
 }
 
-/*
-.works:hover {
-  background-color: #ee82ee;
-  cursor: pointer;
+.menu__text,
+.text-text {
+  transition: margin 1s ease-in-out; // transition the text to match the slide in transition
+  margin-right: 0;
+  white-space: nowrap; // stop text from wrapping onto new line
+  overflow: hidden;
+  text-overflow: ellipsis; // this is what sets the ellipsis for the text
 }
-.works:hover .works__icon {
-  color: #9356dc;
+.menu__price {
+  transition: margin 1s ease-in-out; // transition the text to match the slide in transition
+  margin-right: 0;
+}
+.menu__icon {
+  position: absolute;
+  top: 0;
+  right: -50px; //places this off screen, and slides in when hovering, also takes into consideration the container padding
+  height: 100%;
+  width: 50px;
+  background: #99e2d0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: right 1s ease-in-out;
 }
 
-
-.works__icon,
-.works__text {
-  padding-left: 30px;
-}*/
+.menu-icon__rotate {
+  transition: rotate 1s ease-in-out;
+  rotate: 0deg; // set the initial rotation value
+  color: white;
+}
 
 .order-button {
-  background-image: linear-gradient(to top left, #9356dc, #ff79da);
+  background-image: linear-gradient(to top left, $primary-color, $secondary-color);
   color: white;
   padding: 16px, 35px;
   border: none;
@@ -87,24 +172,58 @@
   width: 200px;
   border-radius: 20px;
   font-size: 16px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
 }
 
-.footer-info {
-  background-color: black;
+.button-center {
+  text-align: center;
+  margin: 20px 0;
 }
 
-.change-on-hover path {
-  fill: white;
+/* animation for menu items */
+.menu-dishes .grid-row:nth-child(1) .menu-item {
+  animation: first 2s ease-in 2s;
 }
 
-.change-on-hover:hover path {
-  fill: white;
+@keyframes first {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.footer-text {
-  color: white;
+.menu-dishes .grid-row:nth-child(2) .menu-item {
+  animation: second 2s ease-in 4s;
+}
+
+@keyframes second {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.menu-dishes .grid-row:nth-child(3) .menu-item {
+  animation: third 2s ease-in 6s;
+}
+
+@keyframes third {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
