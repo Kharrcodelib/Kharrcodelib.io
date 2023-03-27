@@ -73,6 +73,10 @@ footer p,
   color: white;
 }
 
+.contact-email :hover {
+  cursor: pointer;
+}
+
 /* heart hover animation */
 .heart-items i {
   transition: opacity 1s ease-in-out;

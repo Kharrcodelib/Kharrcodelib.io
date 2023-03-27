@@ -75,6 +75,28 @@ footer p,
   color: white;
 }
 
+.contact-email :hover
+{
+  cursor: pointer;
+}
+
+.contact-email
+{
+  p {
+    
+    color: white;
+  }
+  
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: none;
+  }
+}
+
 /* heart hover animation */
 .heart-items i {
   transition: opacity 1s ease-in-out;
