@@ -80,22 +80,13 @@ footer p,
   cursor: pointer;
 }
 
-.contact-email
-{
-  p {
-    
-    color: white;
-  }
   
-  a {
-    color: white;
+a [href^=”mailto”] { color: red; }
+
+a:hover {
     text-decoration: none;
   }
-  
-  a:hover {
-    text-decoration: none;
-  }
-}
+
 
 /* heart hover animation */
 .heart-items i {
